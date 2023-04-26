@@ -9,7 +9,7 @@ const text = document.querySelector('#TextContent').innerText;
 //          then this modified text is added as the inner html.
 //    Args: event is the keyDown event object
 // Remarks: Need to come backt to this one and grab the target element from the
-//          from the event rather than from the dom and then I need to eliminate some noise
+//          event rather than the dom and then I need to eliminate some noise
 //          happening with empty events.
 function handleKeyDown(event) {
 
