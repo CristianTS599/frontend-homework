@@ -25,7 +25,7 @@ const ChangeBGColor = () => {
 //          the box is empty defaults to 2000 ms
 // No return. Sets global interval variable
 const SetInterval = () => {
-  if (intervalInput.value === '') {
+  if (intervalInput.value === '' || intervalInput.value < 0) {
     interval = 2000;
   } else {
     interval = intervalInput.value * 1000;
