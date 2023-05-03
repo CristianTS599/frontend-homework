@@ -7,3 +7,12 @@
 .input-box {
   display: block;
 }
+
+@media (max-width: 576px) {
+  .container {
+    background-color: white;
+    width: 500px;
+    height: 350px;
+  }
+}
+
