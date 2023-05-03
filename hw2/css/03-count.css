@@ -9,5 +9,13 @@
 }
 
 body {
-  background-color: cornflowerblue;
+  background-color: #043145;
+}
+
+@media (max-width: 576px) {
+  .container {
+    background-color: white;
+    width: 400px;
+    height: 500px;
+  }
 }
