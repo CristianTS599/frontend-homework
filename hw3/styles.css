@@ -19,6 +19,20 @@ h1 {
 }
 
 .container {
-  width: 900px;
+  width: 950px;
   background-color: var(--white);
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-img-top {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.card:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }

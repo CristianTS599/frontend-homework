@@ -5,13 +5,15 @@ function CreateCard(character) {
   // setup card
   let newCard = document.createElement('div');
   newCard.classList.add('card');
-  newCard.style.width = '18rem';
+  newCard.style.width = '300px';
 
   // setup card image
   let image = document.createElement('img');
   image.src = `${character.imageUrl}`;
   image.classList.add('card-img-top');
   image.alt = `Picture of Game of Thrones character ${character.fullName}`;
+  image.style.width = '280px';
+  image.style.height = '280px';
 
   newCard.appendChild(image);
 
@@ -41,7 +43,7 @@ fetch(url)
     return response.json();
   })
   .then((data) => {
-    let section = document.querySelector('section');
+    let section = document.querySelector('#content');
     console.log('data');
     console.log(data);
     console.log(data[0]);
