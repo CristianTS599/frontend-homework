@@ -1,0 +1,21 @@
+.highlight {
+  background-color: yellow;
+}
+
+.container {
+  background-color: white;
+  width: 600px;
+  height: 400px;
+}
+
+body {
+  background-color: #043145;
+}
+
+@media (max-width: 576px) {
+  .container {
+    background-color: white;
+    width: 400px;
+    height: 500px;
+  }
+}

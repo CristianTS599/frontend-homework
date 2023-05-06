@@ -8,12 +8,68 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js/bootstrap.bundle.js"></script>
+      <script defer src="scripts/05-form.js"></script>
+      <link rel="stylesheet" href="css/05-form.css"/>
     <script defer src="05-form.js"></script>
   </head>
   <body>
     <main>
-      <form>
-        <h1>Exercise 05 - Form</h1>
+      <form class="form-body container mt-5 p-3">
+        <h1 class="text-center">Exercise 05 - Form</h1>
+          <div class="mb-3">
+            <label for="NameInput" class="form-label fw-bold">Full Name:<span class="requiredColor">*</span></label>
+            <input id="NameInput" required class="form-control" type="text">
+          </div>
+
+          <div class="mb-3">
+            <label for="EmailInput" class="form-label fw-bold">Email:<span class="requiredColor">*</span></label>
+            <input id="EmailInput" required class="form-control" type="email">
+          </div>
+
+          <div class="dropdown mb-3">
+            <label for="RegistrationDropDown" class="form-label fw-bold">Registration Status</label>
+            <input class="btn btn-secondary dropdown-toggle form-control" type="button" id="RegistrationDropDown" data-bs-toggle="dropdown" aria-expanded="false" value="Dropdown button">
+            <ul class="dropdown-menu" aria-labelledby="RegistrationDropDown">
+              <li><a class="dropdown-item">Full Time</a></li>
+              <li><a class="dropdown-item">Part Time</a></li>
+              <li><a class="dropdown-item">Dual Enrolled</a></li>
+            </ul>
+          </div>
+
+          <fieldset class="mb-3">
+            <legend>Have you taken any of the following courses?</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ProgrammingLanguagesCheck" value="Programming Languages">
+              <label class="form-check-label" for="ProgrammingLanguagesCheck">
+                Programming languages
+              </label>
+            </div>  
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="OperatingSystemsCheck" value="Operating Systems">
+              <label class="form-check-label" for="OperatingSystemsCheck">
+                Operating Systems
+              </label>
+            </div>  
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="FullStackWebDevelopmentCheck" value="Full Stack Web Development">
+              <label class="form-check-label" for="FullStackWebDevelopmentCheck">
+                Full Stack WebDevelopment
+              </label>
+            </div>  
+          </fieldset>
+          
+          <div class="mb-3">
+            <label for="CommentBox" class="form-label fw-bold">Anything else?</label>
+            <textarea class="form-control" id="CommentBox" rows="5"></textarea>
+          </div>
+
+          <div class="text-center control-btns">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
       </form>
     </main>
   </body>
