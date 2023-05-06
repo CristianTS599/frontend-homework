@@ -17,3 +17,8 @@ h1 {
   border-radius: 0.8rem;
   background-color: var(--white);
 }
+
+.container {
+  width: 900px;
+  background-color: var(--white);
+}
