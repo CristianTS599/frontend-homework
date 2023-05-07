@@ -51,6 +51,8 @@ fetch(url)
     // grab dom element to add items to
     let section = document.querySelector('#content');
 
+    console.log(data[0]);
+    console.log(data);
     // Create boostrap cards from each charcater and add to
     // dom element
     data.map((char) => section.appendChild(CreateCard(char)));
