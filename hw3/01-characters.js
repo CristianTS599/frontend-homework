@@ -1,6 +1,11 @@
 // url for the Thrones API
 const url = 'https://thronesapi.com/api/v2/Characters';
 
+/// Method: CreateCard
+/// Purpose: Takes in a charcter object and creates a bootstrap
+///          5 card out of it using the image url, character name
+///          and house.
+/// Returns: DOM card element that is ready to be inserted
 function CreateCard(character) {
   // setup card
   let newCard = document.createElement('div');
@@ -43,13 +48,22 @@ fetch(url)
     return response.json();
   })
   .then((data) => {
+    // grab dom element to add items to
     let section = document.querySelector('#content');
-    console.log('data');
-    console.log(data);
-    console.log(data[0]);
 
+    // Create boostrap cards from each charcater and add to
+    // dom element
     data.map((char) => section.appendChild(CreateCard(char)));
   })
   .catch((error) => {
-    console.log(`Error: ${error}`);
+    // register and display any errors
+    let section = document.querySelector('#content');
+    let errorMessage = document.createElement('p');
+    let errorTitle = document.createElement('h2');
+
+    errorTitle.textContent = `Error Processing Request. Try Again Later:`;
+    section.appendChild(errorTitle);
+
+    errorMessage.textContent = `Error Message: ${error}`;
+    section.appendChild(errorMessage);
   });

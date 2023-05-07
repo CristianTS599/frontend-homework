@@ -5,6 +5,7 @@
   --cyan: #17a2b8;
 }
 
+/*03-characters*/
 body {
   background-color: var(--cyan);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
