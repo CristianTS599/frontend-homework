@@ -21,7 +21,7 @@ function CreateCard(character) {
   let cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
 
-  let cardHeading = document.createElement('h5');
+  let cardHeading = document.createElement('h2');
   cardHeading.classList.add('card-title');
   cardHeading.textContent = character.fullName;
 
