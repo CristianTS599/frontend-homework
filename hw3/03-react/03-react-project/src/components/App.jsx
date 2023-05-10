@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container-fluid">
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/search" element={<Search />} />

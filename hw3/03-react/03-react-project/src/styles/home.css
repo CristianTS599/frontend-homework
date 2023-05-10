@@ -1,3 +1,17 @@
 body {
-  background-color: grey;
+  background-color: #3d3d3d;
+}
+
+.home-welcome {
+  text-align: center;
+  margin-top: 30vh;
+  color: #cbcbcb;
+}
+
+.welcome-message {
+  font-size: 40pt;
+}
+
+.Lead {
+  font-size: xx-large;
 }

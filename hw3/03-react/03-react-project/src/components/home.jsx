@@ -1,11 +1,13 @@
-import Button from 'react-bootstrap/Button';
 import '../styles/home.css';
 
 function Home() {
   return (
-    <>
-      <h1>Test - Home</h1>
-    </>
+    <div className="home-page">
+      <div className="home-welcome">
+        <h2 className="welcome-message">Welcome to my HW Assignment!</h2>
+        <p className="Lead">Use the navbar links to move around.</p>
+      </div>
+    </div>
   );
 }
 
