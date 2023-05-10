@@ -1,0 +1,14 @@
+body {
+  background-color: grey;
+}
+
+#nav-container a {
+  text-decoration: none;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#nav-container a:hover {
+  color: #c7c7c7;
+}
