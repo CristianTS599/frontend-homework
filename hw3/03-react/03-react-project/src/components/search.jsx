@@ -5,56 +5,26 @@ import Characters from './characters';
 // url for the Thrones API
 const url = 'https://thronesapi.com/api/v2/Characters';
 
-const GetCharacters = (filter) => {
-  let cards = [];
-  fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      data.map((char) => {
-        cards.push(char);
-      });
-    })
-    .catch((error) => {
-      // register and display any errors
-    });
-
-  console.log('Cards');
-  console.log(cards);
-  return cards;
-};
-
 export default function Search() {
   const [characters, setCharacters] = useState([]);
-  useEffect(() => {
-    const cards = [];
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        data.map((char) => {
-          cards.push(char);
-        });
-      })
-      .catch((error) => {
-        // register and display any errors
-      });
-
-    setCharacters(cards);
-    console.log(cards);
-  }, []);
-
   const [name, setName] = useState('');
 
+  useEffect(() => {
+    const TestFunction = async () => {
+      const res = await fetch(url);
+      const data = await res.json();
+      setCharacters(data);
+    }
+    TestFunction();
+  }, []);
+
   const ChangeName = (event) => {
-    console.log(event.target.value);
+    console.log(`New Filter: ${event.target.value}`);
     setName(event.target.value);
   };
 
   return (
-    <>
+      <>
       <div className="search-page">
         <div className="search-container rounded">
           <p className="lead search-desc">
@@ -82,6 +52,34 @@ export default function Search() {
         </div>
       </div>
       <Characters filter={name} characters={characters} />
-    </>
+      </>
   );
 }
+
+
+
+
+
+
+
+
+/*
+useEffect(() => {
+    const cards = [];
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        data.map((char) => {
+          cards.push(char);
+        });
+      })
+      .catch((error) => {
+        // register and display any errors
+      });
+
+    setCharacters(cards);
+  }, []);
+
+*/

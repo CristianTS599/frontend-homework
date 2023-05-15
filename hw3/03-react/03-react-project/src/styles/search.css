@@ -10,8 +10,23 @@ body {
   margin-left: auto;
   margin-top: 100px;
   padding: 20px;
+  margin-bottom: 100px;;
 }
 
 .search-box {
   margin-top: 40px;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card-container {
+    width: 950px;
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
 }
