@@ -20,6 +20,11 @@ This repository will be updated throughout the course. Always check to see if th
 
 
 ### Module installs
-- npm i react-bootstrap bootstrap
-- npm install vite
-- npm install react-router-dom
+
+to run install:
+    - npm i react-bootstrap bootstrap
+    - npm install vite
+    - npm install react-router-dom
+
+run command: "npm run dev"
+
