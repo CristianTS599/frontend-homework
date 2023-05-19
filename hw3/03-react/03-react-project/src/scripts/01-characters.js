@@ -43,7 +43,8 @@ function CreateCard(character) {
   return newCard;
 }
 
-fetch(url)
+function SetCards(name) {
+  fetch(url)
   .then((response) => {
     return response.json();
   })
@@ -55,7 +56,11 @@ fetch(url)
     console.log(data);
     // Create boostrap cards from each charcater and add to
     // dom element
-    data.map((char) => section.appendChild(CreateCard(char)));
+    data.map((char) => {
+      if (char.fullname.includes(name)) {
+        section.appendChild(CreateCard(char))
+      }
+    });
   })
   .catch((error) => {
     // register and display any errors
@@ -69,3 +74,5 @@ fetch(url)
     errorMessage.textContent = `Error Message: ${error}`;
     section.appendChild(errorMessage);
   });
+
+}

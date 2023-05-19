@@ -17,3 +17,14 @@ For instructions on how to set up the homework repo, start with the 00-setup.md 
 ### Checking for Updates
 
 This repository will be updated throughout the course. Always check to see if there are updates before starting any homework assingment. Make sure to pull any updates (use `git pull <remote> <branch>` to do so).
+
+
+### Module installs
+
+to run install:
+    - npm i react-bootstrap bootstrap
+    - npm install vite
+    - npm install react-router-dom
+
+run command: "npm run dev"
+
